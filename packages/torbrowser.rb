@@ -7,7 +7,7 @@ class Torbrowser < Package
   license 'BSD, custom, MPL-2.0 and MIT'
   compatibility 'x86_64'
   source_url "https://dist.torproject.org/torbrowser/#{version}/tor-browser-linux-x86_64-#{version}.tar.xz"
-  source_sha256 '44db138fcfc73f5d049488eeb580aaa79d2037b5bb2b3f8303de2b92453f55a2'
+  source_sha256 '59d743b3995015975ef10cbfee7421193aeb4fd06256cc2b8aa3a93d5a60bf06'
 
   depends_on 'gtk3'
   depends_on 'gdk_base'
