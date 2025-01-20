@@ -5,11 +5,12 @@ Package.load_package("#{__dir__}/glibc_build232.rb")
 Package.load_package("#{__dir__}/glibc_build233.rb")
 Package.load_package("#{__dir__}/glibc_build235.rb")
 Package.load_package("#{__dir__}/glibc_build237.rb")
+Package.load_package("#{__dir__}/glibc_build238.rb")
 
 class Glibc < Package
   description 'The GNU C Library project provides the core libraries for GNU/Linux systems.'
-  homepage Glibc_build237.homepage
-  license Glibc_build237.license
+  homepage Glibc_build238.homepage
+  license Glibc_build238.license
 
   is_fake
 
