@@ -15,7 +15,7 @@ class Glibc_lib238 < Package
   binary_sha256({
     aarch64: '5c704c9649dca04ddd8a3b3c3a46a81cdf95a162e07362b64992452876297545',
      armv7l: '5c704c9649dca04ddd8a3b3c3a46a81cdf95a162e07362b64992452876297545',
-     x86_64: 'd83b21de790dbf7e33418ad86dd44fb2af933cc811985f2482c8fad696654220'
+     x86_64: '30fb78f2d189c12fadef3d35d5eb1bc2bd4a48bb0d71f354a8e6af0ebc469be1'
   })
 
   depends_on 'glibc_build238' => :build
