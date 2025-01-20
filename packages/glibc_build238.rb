@@ -19,7 +19,7 @@ class Glibc_build238 < Package
   binary_sha256({
     aarch64: '41389ad4ecc6183fca15e2335e20b1617585ea068eed0e280d05dec5aebd9e10',
      armv7l: '41389ad4ecc6183fca15e2335e20b1617585ea068eed0e280d05dec5aebd9e10',
-     x86_64: '476d322fca4f023479303c2a39e638d1bfaf12b78693e3b3a96dbece93a76df2'
+     x86_64: '30fb78f2d189c12fadef3d35d5eb1bc2bd4a48bb0d71f354a8e6af0ebc469be1'
   })
 
   depends_on 'gawk' => :build
