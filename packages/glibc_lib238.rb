@@ -7,7 +7,7 @@ class Glibc_lib238 < Package
   version '2.38-patchelf2' # Do not use @_ver here, it will break the installer.
   license Glibc_build238.license
   compatibility 'x86_64 aarch64 armv7'
-  min_glibc version.split('-').first
+  min_glibc '2.37'
   max_glibc version.split('-').first
   source_url 'SKIP'
   binary_compression 'tar.zst'
