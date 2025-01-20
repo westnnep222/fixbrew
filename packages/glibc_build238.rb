@@ -10,7 +10,7 @@ class Glibc_build238 < Package
   compatibility 'x86_64 aarch64 armv7l'
   min_glibc '2.37'
   max_glibc version.split('-').first
-  source_url 'https://github.com/bminor/glibc.git'
+  source_url 'https://archive.org/download/archlinux_pkg_glibc/glibc-2.38-1-x86_64.pkg.tar.zst'
   # git_hashtag 'glibc-2.38'
   # From the release/2.38/master/ branch...
   git_hashtag '36f2487f13e3540be9ee0fb51876b1da72176d3f'
