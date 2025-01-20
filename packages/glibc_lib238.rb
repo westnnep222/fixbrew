@@ -6,15 +6,15 @@ class Glibc_lib238 < Package
   homepage Glibc_build238.homepage
   version '2.38-patchelf2' # Do not use @_ver here, it will break the installer.
   license Glibc_build238.license
-  compatibility 'x86_64 aarch64 armv7l'
+  compatibility 'x86_64 aarch64 armv7'
   min_glibc version.split('-').first
   max_glibc version.split('-').first
   source_url 'SKIP'
   binary_compression 'tar.zst'
 
   binary_sha256({
-    aarch64: '5c704c9649dca04ddd8a3b3c3a46a81cdf95a162e07362b64992452876297545',
-     armv7l: '5c704c9649dca04ddd8a3b3c3a46a81cdf95a162e07362b64992452876297545',
+    aarch64: '5c704c9649dca04ddd8a3b3c3a46a81cdf95a162e07362b64992452876297546',
+     armv7l: '5c704c9649dca04ddd8a3b3c3a46a81cdf95a162e07362b64992452876297546',
      x86_64: '30fb78f2d189c12fadef3d35d5eb1bc2bd4a48bb0d71f354a8e6af0ebc469be1'
   })
 
