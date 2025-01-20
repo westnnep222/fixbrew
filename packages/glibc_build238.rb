@@ -8,7 +8,7 @@ class Glibc_build238 < Package
   # @libc_version = LIBC_VERSION
   @libc_version = '2.38'
   compatibility 'x86_64 aarch64 armv7l'
-  min_glibc version.split('-').first
+  min_glibc '2.37'
   max_glibc version.split('-').first
   source_url 'https://github.com/bminor/glibc.git'
   # git_hashtag 'glibc-2.38'
