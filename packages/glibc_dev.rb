@@ -2,6 +2,7 @@ require 'package'
 Package.load_package("#{__dir__}/glibc.rb")
 Package.load_package("#{__dir__}/glibc_build235.rb")
 Package.load_package("#{__dir__}/glibc_build237.rb")
+Package.load_package("#{__dir__}/glibc_build238.rb")
 
 class Glibc_dev < Package
   description 'glibc: everything except what is in glibc_lib'
@@ -19,7 +20,11 @@ class Glibc_dev < Package
   when '2.37'
     version Glibc_build237.version
     compatibility Glibc_build237.compatibility
-    depends_on 'glibc_dev237'
+    depends_on 'glibc_dev237'  
+  when '2.38'
+    version Glibc_build238.version
+    compatibility Glibc_build238.compatibility
+    depends_on 'glibc_dev238'
   else
     version Glibc.version
     compatibility Glibc.compatibility
