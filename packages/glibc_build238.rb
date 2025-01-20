@@ -13,7 +13,7 @@ class Glibc_build238 < Package
   source_url 'https://github.com/bminor/glibc.git'
   # git_hashtag 'glibc-2.38'
   # From the release/2.38/master/ branch...
-  git_hashtag 'f82e0922de82ccee60c15d5ffd9e7165ced00a83'
+  git_hashtag '36f2487f13e3540be9ee0fb51876b1da72176d3f'
   binary_compression 'tar.zst'
 
   binary_sha256({
