@@ -38,6 +38,10 @@ class Glibc < Package
     version Glibc_build237.version
     compatibility Glibc_build237.compatibility
     depends_on 'glibc_lib237'
+  when '2.38'
+    version Glibc_build238.version
+    compatibility Glibc_build238.compatibility
+    depends_on 'glibc_lib238'
   else
     version LIBC_VERSION
     compatibility 'x86_64 aarch64 armv7l'
