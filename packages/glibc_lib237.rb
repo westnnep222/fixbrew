@@ -4,7 +4,7 @@ Package.load_package("#{__dir__}/glibc_build237.rb")
 class Glibc_lib237 < Package
   description 'glibc libraries'
   homepage Glibc_build237.homepage
-  version '2.37-patchelf2' # Do not use @_ver here, it will break the installer.
+  version '2.38-patchelf2' # Do not use @_ver here, it will break the installer.
   license Glibc_build237.license
   compatibility 'x86_64 aarch64 armv7l'
   min_glibc version.split('-').first
@@ -48,7 +48,7 @@ class Glibc_lib237 < Package
                       libmvec.so.1 libnss_dns.so.2 libnss_files.so.2 libpthread.so.0
                       libresolv.so.2 librt.so.1 libthread_db.so.1 libutil.so.1]
 
-      glibc_libs.delete_if { |lib| lib == 'libc.so.6' } if (ARCH == 'x86_64') && (Gem::Version.new(LIBC_VERSION) >= Gem::Version.new('2.37'))
+      glibc_libs.delete_if { |lib| lib == 'libc.so.6' } if (ARCH == 'x86_64') && (Gem::Version.new(LIBC_VERSION) >= Gem::Version.new('2.38'))
       glibc_libs.each do |lib|
         # Do not replace libraries that have been patched for our glibc libC.so.6.
         next if Kernel.system("patchelf --print-needed #{File.join(CREW_LIB_PREFIX, lib)} | grep -q libC.so.6")
@@ -60,7 +60,7 @@ class Glibc_lib237 < Package
   end
 
   def self.postinstall
-    return unless (ARCH == 'x86_64') && (Gem::Version.new(LIBC_VERSION) >= Gem::Version.new('2.37'))
+    return unless (ARCH == 'x86_64') && (Gem::Version.new(LIBC_VERSION) >= Gem::Version.new('2.38'))
 
     puts "patchelf is needed. Please run: 'crew install patchelf ; crew postinstall #{name}'".lightred unless File.file?(File.join(CREW_PREFIX, 'bin/patchelf'))
     # Link the system libc.so.6 to also require our renamed libC.so.6
